@@ -38,9 +38,11 @@ inquirer
     ])
     .then((data) => {
         const README = `${data.title.split(' ').join('')}.md`; 
-        console.log(data);
+        
 
         let responses = generateMarkdown(data);
+        responses = responses.replace(/`/g, "");
+        console.log(responses);
         fs.writeFile(README, responses, (err) => {
             if(err) {
                 console.error(err)
