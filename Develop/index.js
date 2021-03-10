@@ -58,7 +58,7 @@ inquirer
             type: 'list',
             message: 'Choose a license for this project: ',
             name: 'license',
-            choices: ['Apache', 'MIT', 'Mozilla', 'Eclipse'],
+            choices: ['Apache', 'IBM', 'Mozilla', 'Eclipse'],
           },
     ])
     .then((data) => {
