@@ -28,13 +28,13 @@ function generateMarkdown(data) {
   let license = renderLicenseLink(data.license);
   return `# **${data.title}**
     \n# Table of Contents
-    \n  *[Description](#description)
-    \n  *[Installation](#installation)
-    \n  *[Usage](#usage)
-    \n  *[Contribution Guidelines](#guidelines)
-    \n  *[Test Instructions](#test)
-    \n  *[Questions](#questionOne)
-    \n  *[License](#license)
+    \n *  [Description](#description)
+    \n *  [Installation](#installation)
+    \n *  [Usage](#usage)
+    \n *  [Contribution Guidelines](#guidelines)
+    \n *  [Test Instructions](#test)
+    \n *  [Questions](#questionOne)
+    \n *  [License](#license)
     \n## Description
     \n ${data.description}
     \n## Installation
