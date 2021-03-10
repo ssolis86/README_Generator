@@ -7,42 +7,63 @@ inquirer
         {
             type: 'input',
             name: 'title',
-            message: 'What is the title of your project',
+            message: 'Please enter the title of your README file: ',
         },
         {
             type: 'input',
             name: 'description',
-            message: 'Enter a description of the project you are starting.',
+            message: 'Enter a description of the project you are starting: ',
         },
         {
             type: 'input',
             name: 'installation',
-            message: 'List installation instructions for user',
+            message: 'List installation instructions for user: ',
         },
         {
             type: 'input',
             name: 'usage',
-            message: 'Please enter usage information.',
+            message: 'How will someone use this application?  ',
         },
         {
             type: 'input',
             name: 'guidelines',
-            message: "Enter contribution guidelines.",
+            message: "Enter contribution guidelines: ",
         },
         {
             type: 'input',
             name: 'test',
-            message: 'Enter test instructions for application',
+            message: 'Enter test instructions for application: ',
         },
-
+        {
+            type: 'input',
+            name: 'questionOne',
+            message: 'Are there any other contributors to this project? ',
+        },
+        {
+            type: 'input',
+            name: 'questionTwo',
+            message: 'Please list test instructions for this application: ',
+        },
+        {
+            type: 'input',
+            name: 'questionThree',
+            message: 'What is your gitHub username? ',
+        },
+        {
+            type: 'input',
+            name: 'questionFour',
+            message: 'What is your email address? ',
+        },
+        {
+            type: 'list',
+            message: 'Choose a license for this project: ',
+            name: 'license',
+            choices: ['Apache', 'MIT', 'Mozilla', 'Eclipse'],
+          },
     ])
     .then((data) => {
         const README = `${data.title.split(' ').join('')}.md`; 
-        
-
         let responses = generateMarkdown(data);
-        responses = responses.replace(/`/g, "");
-        console.log(responses);
         fs.writeFile(README, responses, (err) => {
             if(err) {
                 console.error(err)
