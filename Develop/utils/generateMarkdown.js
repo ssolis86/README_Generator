@@ -27,7 +27,7 @@ function renderLicenseLink(license) {
 function generateMarkdown(data) {
   let license = renderLicenseLink(data.license);
   return `# **${data.title}**
-    \n# Table of Contents
+    \n## Table of Contents
     \n *  [Description](#description)
     \n *  [Installation](#installation)
     \n *  [Usage](#usage)
